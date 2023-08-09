@@ -1,0 +1,10 @@
+ - name: Test flex path
+   request:
+     uri: /hello/flex/whatever
+     regexuri: \/hello\/flex\/[a-z]+
+     method: GET
+   response:
+     code: 200
+     body: '{"message": "hello, flex path"}'
+     headers:
+       content-type: text/json

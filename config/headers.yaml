@@ -1,0 +1,11 @@
+ - name: Test endpoint 
+   request:
+     uri: /hello
+     method: GET
+     headers:
+       x-api-key: xyz
+   response:
+     code: 200
+     body: '{"message": "hello, world with header"}'
+     headers:
+       content-type: text/json

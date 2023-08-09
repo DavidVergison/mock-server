@@ -1,0 +1,10 @@
+ - name: Test POST
+   request:
+     uri: /hello
+     method: POST
+     body: '{"message": "there"}'
+   response:
+     code: 200
+     body: '{"message": "hello there"}'
+     headers:
+       content-type: text/json

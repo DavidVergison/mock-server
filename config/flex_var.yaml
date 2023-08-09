@@ -1,0 +1,10 @@
+ - name: Test flex var
+   request:
+     uri: /hello/flexvar?a=b&c=whatever
+     regexuri: \/hello\/flexvar\?a\=b\&c=[a-z]+
+     method: GET
+   response:
+     code: 200
+     body: '{"message": "hello, flex var"}'
+     headers:
+       content-type: text/json
